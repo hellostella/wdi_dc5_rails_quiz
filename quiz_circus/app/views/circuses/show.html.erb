@@ -1,1 +1,10 @@
+<div> <%= link_to 'See All Circuses', circuses_path %> </div>
+<h2><%= @circus.name %></h2>
+<div class= 'pic'><%= image_tag @circus.image_url %></div>
 
+
+<% @circus.entertainers.each do |entertainer| %>
+<p>The entertainer is <%= entertainer.name %> with a specialty in <%= entertainer.specialty %></p>
+<% end %>
+
+<%= render 'form' %>

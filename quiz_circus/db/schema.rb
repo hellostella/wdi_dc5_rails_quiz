@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 20150416200356) do
   enable_extension "plpgsql"
 
   create_table "circuses", force: :cascade do |t|
-    t.string   "name"
-    t.string   "image_url"
+    t.string   "name"       , null: false
+    t.string   "image_url"  , null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
